@@ -1,1 +1,2 @@
-# daily-logs
+# DAILY LOGS
+

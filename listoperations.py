@@ -1,18 +1,11 @@
-
 user_input = input("Enter a list: ")
 element_to_find = input("Enter the element whose position you want to find: ")
-
-
 data = eval(user_input)  
 try:
     element_to_find = eval(element_to_find)
 except:
     pass  
-
-
 found = False
-
-
 for i in range(len(data)):
     if isinstance(data[i], list):
         for j in range(len(data[i])):

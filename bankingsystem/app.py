@@ -8,13 +8,12 @@ def user_info(name, acc_no, balance=None):
     else:
         user_data.append([name, acc_no])
 
-    print("\n📄 User Info:", user_data)
+    print("\n User Info:", user_data)
 
 
 def main():
     name = input("Enter your name: ")
     acc_no = int(input("Enter your account Number: "))
-
     balance = 0
     has_balance = False
 
@@ -34,11 +33,11 @@ def main():
 
         withdrawal_amt = int(input("Enter the amount to withdraw: "))
         if withdrawal_amt > balance:
-            print("❌ Insufficient balance. Withdrawal failed.")
+            print("Insufficient balance. Withdrawal failed.")
         else:
             balance = bus.withdraw(balance, withdrawal_amt)
-            print(f"✅ Amount {withdrawal_amt} withdrawn successfully.")
-            print(f"💰 Total Balance: {balance}")
+            print(f"Amount {withdrawal_amt} withdrawn successfully.")
+            print(f" Total Balance: {balance}")
 
     deposit_choice = input("\nDo you want to deposit any amount [yes/no]: ").lower()
     if deposit_choice == "yes":
@@ -47,8 +46,8 @@ def main():
             has_balance = True
         deposit_amt = int(input("Enter the amount to deposit: "))
         balance = bus.deposit(balance, deposit_amt)
-        print(f"✅ Amount {deposit_amt} deposited successfully.")
-        print(f"💰 Total Balance: {balance}")
+        print(f"Amount {deposit_amt} deposited successfully.")
+        print(f"Total Balance: {balance}")
 
 
 if __name__ == "__main__":
